@@ -1,0 +1,29 @@
+int firstLed = 7;
+int secondLed = 5;
+int thirdLed = 3;
+
+int blinkTime = 100;
+
+void setup()
+{
+ pinMode(firstLed, OUTPUT);
+ pinMode(secondLed, OUTPUT);
+ pinMode(thirdLed, OUTPUT);
+}
+
+void loop()
+{
+  blinkLed(firstLed);
+  blinkLed(secondLed);
+  blinkLed(thirdLed);
+  blinkLed(secondLed);
+  
+} 
+
+void blinkLed(int led)
+{   
+  digitalWrite(led, HIGH);
+  delay(blinkTime);
+  digitalWrite(led, LOW);
+  delay(blinkTime);              
+}
